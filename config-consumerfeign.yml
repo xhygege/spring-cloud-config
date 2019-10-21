@@ -1,0 +1,36 @@
+#server配置
+server:
+  port: 8010
+
+#应用配置
+spring:
+  application:
+    name: movie-consumer-feign
+
+#eureka client配置
+eureka:
+  client:
+    service-url:
+     #defaultZone: http://localhost:8761/eureka # # ??а???????????????????????eureka server
+     defaultZone: http://${eurekaserver.anthen.user}:${eurekaserver.anthen.password}@eurekaserver:8761/eureka #eureka?а??????
+     #defaultZone: http://${eurekaserver.anthen.user}:${eurekaserver.anthen.password}@eurekaserver:8761/eureka, http://${eurekaserver.anthen.user}:${eurekaserver.anthen.password}@eurekaserverha:8762/eureka #?????? + ??????????????????????,??????
+  instance:
+    prefer-ip-address: true
+
+# 为feign启用hystrix
+feign:
+  hystrix:
+    enabled: true
+
+
+#自定义的属性
+eurekaserver:
+  anthen:
+    user: mycloud
+    password: 123
+
+
+# 配置ribbon
+user-provider:
+ ribbon:
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机策略
