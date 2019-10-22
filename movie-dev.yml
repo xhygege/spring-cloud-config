@@ -6,6 +6,12 @@ server:
 spring:
   application:
     name: movie-consumer-feign
+# 配置消息队列
+  rabbitmq:
+    host: 192.168.40.1
+    username: hdd
+    password: hdd
+    port: 5672 # rabbitmq的默认端口时5672
 
 #eureka client配置
 eureka:
