@@ -40,5 +40,5 @@ user-provider:
  ribbon:
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机策略
 
-env: dev123
+env: dev1231111
 
