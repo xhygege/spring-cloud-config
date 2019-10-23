@@ -1,6 +1,6 @@
 #server配置
-server:
-  port: 8010
+#server:
+  #port: 8010
 
 #应用配置
 spring:
