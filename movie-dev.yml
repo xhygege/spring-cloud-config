@@ -40,6 +40,6 @@ user-provider:
  ribbon:
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机策略
 
-env: dev@@refresh
+env: dev@@refresh123
 ppp: test-123
 
